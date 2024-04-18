@@ -16,4 +16,23 @@ const LabeledLink = ({ label, value }) => {
     );
   };
   
-    export default LabeledLink;
+    export default LabeledLink;import React from 'react';
+import PropTypes from 'prop-types';
+
+const LabeledLink = ({ label, url }) => {
+  return (
+    <div className="labeled-link">
+      <strong>{label}:</strong>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>
+    </div>
+  );
+};
+
+LabeledLink.propTypes = {
+  label: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
+export default LabeledLink;
