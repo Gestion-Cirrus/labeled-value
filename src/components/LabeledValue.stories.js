@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledValue from './LabeledValue';
 
 export default {
-  title: 'LabeledValue',
+  title: 'Routing/LabeledValue',
   component: LabeledValue,
 };
 
@@ -28,4 +28,15 @@ export const JsonValue = () => (
 
 export const VoidValue = () => (
   <LabeledValue label="Void" value={null} />
+);
+
+export const MultipleValues = () => (
+  <div>
+    <LabeledValue label="String" value="This is a string" />
+    <LabeledValue label="Number" value={42} />
+    <LabeledValue label="Boolean" value={true} />
+    <LabeledValue label="Date" value={new Date().toISOString()} />
+    <LabeledValue label="JSON" value={{ key: 'value' }} />
+    <LabeledValue label="Void" value={null} />
+  </div>
 );

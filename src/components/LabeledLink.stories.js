@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledLink from './LabeledLink';
 
 export default {
-  title: 'Components/LabeledLink',
+  title: 'Independent/LabeledLink',
   component: LabeledLink,
 };
 

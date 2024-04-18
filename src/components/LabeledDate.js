@@ -1,3 +1,5 @@
+import './LabeledValue.css';
+
 import React from 'react';
 import { isDate } from '../utils/typeHelpers';
 import LabeledVoid from './LabeledVoid';
@@ -12,8 +14,8 @@ const LabeledDate = ({ label, value, format }) => {
 
   return (
     <div className="labeled-value labeled-date">
-      <div className="labeled-value-label">{label}</div>
-      <div className="labeled-value-value">{displayValue}</div>
+      {label && <div className="labeled-value-label">{label}</div>}
+      <time className="labeled-value-value" dateTime={date.toISOString()}>{displayValue}</time>
     </div>
   );
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/labeledvalue.bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -13,12 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@shoelace-style/shoelace": "^2.15.0",
     "ol": "^9.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-react": "^7.24.1",
     "@chromatic-com/storybook": "^1.3.3",
@@ -32,6 +36,7 @@
     "@storybook/react-webpack5": "^8.0.8",
     "@storybook/test": "^8.0.8",
     "babel-loader": "^9.1.3",
+    "core-js": "^3.37.0",
     "css-loader": "^7.1.1",
     "source-map-loader": "^5.0.0",
     "storybook": "^8.0.8",

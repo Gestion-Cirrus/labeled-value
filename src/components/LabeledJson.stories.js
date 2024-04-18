@@ -8,7 +8,7 @@ const sampleJson = {
 };
 
 export default {
-  title: 'LabeledJson',
+  title: 'Basic/LabeledJson',
   component: LabeledJson,
 };
 

@@ -1,3 +1,5 @@
+import './LabeledValue.css';
+
 import React from 'react';
 
 const LabeledRaw = ({ label, value }) => {
@@ -5,7 +7,7 @@ const LabeledRaw = ({ label, value }) => {
 
   return (
     <div className="labeled-value labeled-raw">
-      <div className="labeled-value-label">{label}</div>
+      {label && <div className="labeled-value-label">{label}</div>}
       <pre className="labeled-value-value">{stringValue}</pre>
     </div>
   );

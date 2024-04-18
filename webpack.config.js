@@ -44,7 +44,10 @@ module.exports = {
         'ol/style': 'ol.style',
         'ol/style/Style': 'ol.style.Style',
         'ol/style/Fill': 'ol.style.Fill',
-        'ol/style/Stroke': 'ol.style.Stroke'
+        'ol/style/Stroke': 'ol.style.Stroke',
+        'ol/style/Circle': 'ol.style.Circle',
+        'ol/style/Icon': 'ol.style.Icon',
+        
   },
   resolve: {
     extensions: ['.js', '.jsx'],

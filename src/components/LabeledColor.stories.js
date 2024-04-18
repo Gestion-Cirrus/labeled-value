@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledColor from './LabeledColor';
 
 export default {
-  title: 'LabeledColor',
+  title: 'Basic/LabeledColor',
   component: LabeledColor,
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledDate from './LabeledDate';
 
 export default {
-  title: 'LabeledDate',
+  title: 'Basic/LabeledDate',
   component: LabeledDate,
 };
 

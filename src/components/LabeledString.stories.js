@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledString from './LabeledString';
 
 export default {
-  title: 'LabeledString',
+  title: 'Basic/LabeledString',
   component: LabeledString,
 };
 

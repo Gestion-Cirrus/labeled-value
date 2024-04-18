@@ -1,3 +1,5 @@
+import './LabeledValue.css';
+
 import React from 'react';
 import { isColor } from '../utils/typeHelpers';
 import LabeledVoid from './LabeledVoid';
@@ -9,8 +11,10 @@ const LabeledColor = ({ label, value }) => {
 
   return (
     <div className="labeled-value labeled-color">
-      <div className="labeled-value-label">{label}</div>
-      <div className="labeled-value-value" style={{ backgroundColor: value, width: '50px', height: '50px' }}></div>
+      {label && <div className="labeled-value-label">{label}</div>}
+      <div className="labeled-value-value" >
+        <div className='color-square' style={{backgroundColor: value}}></div>
+      </div>
     </div>
   );
 };

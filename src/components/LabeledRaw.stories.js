@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledRaw from './LabeledRaw';
 
 export default {
-  title: 'LabeledRaw',
+  title: 'Independent/LabeledRaw',
   component: LabeledRaw,
 };
 

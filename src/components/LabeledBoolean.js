@@ -1,3 +1,6 @@
+import './LabeledValue.css';
+
+import './LabeledBoolean.css';
 import React from 'react';
 import { isBoolean } from '../utils/typeHelpers';
 import LabeledVoid from './LabeledVoid';
@@ -10,7 +13,7 @@ const LabeledBoolean = ({ label, value }) => {
   return (
     <div className="labeled-value labeled-boolean">
       <div className="labeled-value-label">{label}</div>
-      <div className="labeled-value-value">{value ? '✓' : '✗'}</div>
+      <div className={`labeled-value-value ${value ? 'boolean-true' : 'boolean-false'}`}>{value ? '✓' : '✗'}</div>
     </div>
   );
 };

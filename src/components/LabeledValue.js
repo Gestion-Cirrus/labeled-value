@@ -1,3 +1,4 @@
+import './LabeledValue.css';
 import React from 'react';
 import { determineValueType } from '../utils/typeHelpers';
 import LabeledVoid from './LabeledVoid';
@@ -27,7 +28,7 @@ const LabeledValue = ({ label, value }) => {
       break;
     case 'Number':
       ComponentToRender = LabeledNumber;
-      break;
+      break;column
     case 'Date':
       ComponentToRender = LabeledDate;
       break;
@@ -48,7 +49,7 @@ const LabeledValue = ({ label, value }) => {
       break;
     case 'Video':
       ComponentToRender = LabeledVideo;
-      break;
+      break;column
     case 'Audio':
       ComponentToRender = LabeledAudio;
       break;

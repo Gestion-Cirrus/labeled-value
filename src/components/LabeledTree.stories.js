@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledTree from './LabeledTree';
 
 export default {
-  title: 'LabeledTree',
+  title: 'Routing/LabeledTree',
   component: LabeledTree,
 };
 
@@ -11,9 +11,25 @@ export const Default = () => (
 );
 
 export const WithArray = () => (
-    <LabeledTree label="Tree" value={['value1', 'value2', 'value3']} />
+    <LabeledTree label="Tree" value={['foo', 'bar', 'baz']} />
 );
 
 export const NestedObjects = () => (
-    <LabeledTree label="Tree" value={{ level1: { level2: { level3: 'value' } } }} />
+    <LabeledTree label="Tree" value={{ foo: { bar: { baz: 'value' } } }} />
+);
+
+export const ArrayOfNestedObjects = () => (
+    <LabeledTree label="Tree" value={[{ foo: 'bar' }, { baz: 'qux' }]} />
+);
+
+export const ArrayOfDeeplyNestedObjects = () => (
+    <LabeledTree label="Tree" value={[{ foo: { bar: { baz: 'qux' } } }, { quux: { corge: 'grault' } }]} />
+);
+
+export const ArrayOfMixedObjects = () => (
+    <LabeledTree label="Tree" value={[{ foo: 'bar' }, 'baz', { qux: 'quux' }]} />
+);
+
+export const ArrayOfMixedObjectsAndArrays = () => (
+    <LabeledTree label="Tree" value={[{ foo: ['bar', 'baz'] }, 'qux', { quux: ['corge', 'grault'] }]} />
 );

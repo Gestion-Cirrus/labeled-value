@@ -1,3 +1,4 @@
+
 export const isNullish = (value) => {
   if (value === null || value === undefined || value === '' || Number.isNaN(value)) {
     return true;
@@ -12,11 +13,17 @@ export const isNullish = (value) => {
 
 
 export const isString = (value) => {
-  return typeof value === 'string' || value instanceof String;
+  return typeof value === 'string' || value instanceof String && !isNullish(value) && !isNumber(value)  ;
 };
 
 export const isNumber = (value) => {
-  return typeof value === 'number' && isFinite(value);
+  if( typeof value ==='number' ){
+    return isFinite(value);
+  }else if( typeof value === 'string'){
+    return /^\d+$/.test(value) || /^\d+\.\d+$/.test(value) || /^\d+e\d+$/.test(value);
+  }
+  return false;
+  // return typeof value === 'number' && isFinite(value) || /^\d+$/.test(value) || /^\d+\.\d+$/.test(value) || /^\d+e\d+$/.test(value);
 };
 
 export const isBoolean = (value) => {

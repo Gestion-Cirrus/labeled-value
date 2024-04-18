@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledEmail from './LabeledEmail';
 
 export default {
-  title: 'LabeledEmail',
+  title: 'Basic/LabeledEmail',
   component: LabeledEmail,
 };
 
@@ -12,4 +12,8 @@ export const Default = () => (
 
 export const WithMailtoLink = () => (
     <LabeledEmail label="Email" value="example@example.com" mailto />
+);
+
+export const InvalidType = () => (
+    <LabeledEmail label="Email" value={{ notAString: true }} />
 );

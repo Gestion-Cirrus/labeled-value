@@ -1,3 +1,5 @@
+import './LabeledValue.css';
+
 import React from 'react';
 import { isEmail } from '../utils/typeHelpers';
 import LabeledVoid from './LabeledVoid';
@@ -11,7 +13,7 @@ const LabeledEmail = ({ label, value, mailto }) => {
 
   return (
     <div className="labeled-value labeled-email">
-      <div className="labeled-value-label">{label}</div>
+      {label && <div className="labeled-value-label">{label}</div>}
       <div className="labeled-value-value">{emailLink}</div>
     </div>
   );

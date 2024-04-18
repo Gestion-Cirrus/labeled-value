@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledVoid from './LabeledVoid';
 
 export default {
-  title: 'LabeledVoid',
+  title: 'Basic/LabeledVoid',
   component: LabeledVoid,
 };
 

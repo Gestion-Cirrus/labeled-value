@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledBoolean from './LabeledBoolean';
 
 export default {
-  title: 'LabeledBoolean',
+  title: 'Basic/LabeledBoolean',
   component: LabeledBoolean,
 };
 

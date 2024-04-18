@@ -72,16 +72,21 @@ describe('typeHelpers', () => {
       expect(isNumber(0)).toBe(true);
       expect(isNumber(-123)).toBe(true);
       expect(isNumber(1.23)).toBe(true);
+      expect(isNumber('123')).toBe(true);
+      expect(isNumber('1.23')).toBe(true);
+
+
     });
     it('should return false for non-numbers and non-finite numbers', () => {
       expect(isNumber(NaN)).toBe(false);
       expect(isNumber(Infinity)).toBe(false);
       expect(isNumber(-Infinity)).toBe(false);
-      expect(isNumber('123')).toBe(false);
       expect(isNumber(null)).toBe(false);
       expect(isNumber(undefined)).toBe(false);
       expect(isNumber({})).toBe(false);
       expect(isNumber([])).toBe(false);
+      expect(isNumber('123A')).toBe(false);
+
     });
   });
 

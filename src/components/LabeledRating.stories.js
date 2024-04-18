@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledRating from './LabeledRating';
 
 export default {
-  title: 'LabeledRating',
+  title: 'Independent/LabeledRating',
   component: LabeledRating,
 };
 
@@ -11,7 +11,7 @@ const Template = (args) => <LabeledRating {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   label: 'Customer Satisfaction',
-  value: 4.5,
+  value: 3,
 };
 
 export const FullStars = Template.bind({});

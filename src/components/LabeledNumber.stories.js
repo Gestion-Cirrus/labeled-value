@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledNumber from './LabeledNumber';
 
 export default {
-  title: 'LabeledNumber',
+  title: 'Basic/LabeledNumber',
   component: LabeledNumber,
 };
 

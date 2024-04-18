@@ -2,7 +2,7 @@ import React from 'react';
 import LabeledCurrency from './LabeledCurrency';
 
 export default {
-  title: 'LabeledCurrency',
+  title: 'Independent/LabeledCurrency',
   component: LabeledCurrency,
 };
 
