@@ -1,11 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import LabeledEmail from './LabeledEmail';
 
-storiesOf('LabeledEmail', module)
-  .add('default', () => (
+export default {
+  title: 'LabeledEmail',
+  component: LabeledEmail,
+};
+
+export const Default = () => (
     <LabeledEmail label="Email" value="example@example.com" />
-  ))
-  .add('with mailto link', () => (
+);
+
+export const WithMailtoLink = () => (
     <LabeledEmail label="Email" value="example@example.com" mailto />
-  ));
+);

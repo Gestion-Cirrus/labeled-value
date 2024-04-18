@@ -1,14 +1,19 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import LabeledTree from './LabeledTree';
 
-storiesOf('LabeledTree', module)
-  .add('default', () => (
+export default {
+  title: 'LabeledTree',
+  component: LabeledTree,
+};
+
+export const Default = () => (
     <LabeledTree label="Tree" value={{ node1: 'value1', node2: 'value2' }} />
-  ))
-  .add('with array', () => (
+);
+
+export const WithArray = () => (
     <LabeledTree label="Tree" value={['value1', 'value2', 'value3']} />
-  ))
-  .add('nested objects', () => (
+);
+
+export const NestedObjects = () => (
     <LabeledTree label="Tree" value={{ level1: { level2: { level3: 'value' } } }} />
-  ));
+);
