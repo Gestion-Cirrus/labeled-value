@@ -1,0 +1,46 @@
+/* Base styling for the timeline container */
+
+.timeline-container {
+    display: flex;
+    position: relative;
+    height: 30px; /* Fixed height for the timeline */
+    background-color: #e9ecef; /* Light background for the timeline track */
+    border-radius: 15px;
+    overflow: hidden; /* Ensures no content spills outside the border radius */
+}
+
+.timeline-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    transition: width 0.3s ease-in-out; /* Smooth transition for dynamic width adjustments */
+}
+
+/* Color coding for different types of segments */
+.timeline-segment.active {
+    background-color: #28a745; /* Green for active periods */
+}
+
+.timeline-segment.paused {
+    background-color: #ffc107; /* Yellow for paused periods */
+}
+
+.timeline-segment.stopped {
+    background-color: #dc3545; /* Red for stopped periods */
+}
+
+/* Tooltip styling for additional segment info on hover */
+.timeline-segment:hover::after {
+    content: attr(title);
+    position: absolute;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    top: -35px; /* Position above the segment */
+    white-space: nowrap;
+    font-size: 12px;
+    color: #fff;
+}

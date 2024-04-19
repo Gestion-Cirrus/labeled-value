@@ -56,8 +56,14 @@ module.exports = {
   },
     optimization: {
         minimize: true,
-        minimizer: [new TerserPlugin()]
+        minimizer: [new TerserPlugin({
+            extractComments: {
+                condition: /^\**!|@preserve|@license|@cc_on/i, // Adjusted to include more types of comments
+                banner: (licenseFile) => {
+                    return `License information can be found in LICENSE.txt. For more details, see LICENSE.txt in the project root.`;
+                },
+            },
+        })]
     },
     devtool: 'source-map'
-  
 };

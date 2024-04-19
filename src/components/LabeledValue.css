@@ -1,0 +1,151 @@
+
+
+.labeled-value {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start; 
+    font-family: var(--sl-font-sans); /* Use Shoelace font variable */
+    font-size: var(--sl-font-size-medium);
+    line-height: var(--sl-line-height-normal); /* Use Shoelace line height variable */
+    min-height:var(--sl-font-size-medium);;
+    margin-bottom: var(--sl-spacing-medium); /* Use Shoelace spacing variable */
+ }
+ 
+ .labeled-value-label {
+    margin:0;
+    text-transform: uppercase;
+    letter-spacing: var(--sl-letter-spacing-loose); /* Adjusted to use a Shoelace variable */
+    font-weight: normal;
+    text-align:right;
+    flex:1;
+    color:var(--sl-color-neutral-600); /* Use Shoelace color variable */
+    /* scale down hack for smaller font size keeping the same line height */
+    transform: scale(0.75);
+    transform-origin: bottom left;
+    padding-right: var(--sl-spacing-large); /* Use Shoelace spacing variable */
+    height:var(--sl-font-size-medium);;
+    box-sizing: border-box;
+ }
+ 
+ .labeled-value-value {
+     flex: 3;
+     font-size:var(--sl-font-size-medium); /* Use Shoelace font size variable */
+     margin-right: var(--sl-spacing-large); /* Consistent spacing variable from Shoelace */
+
+ }
+ 
+ figure.labeled-value-value {
+     margin: 0;
+     max-width:600px;
+     position: relative;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color:var(--sl-panel-background-color); /* Shoelace color variable */
+     border: 1px solid var(--sl-panel-border-color); /* Shoelace color variable */
+     box-sizing: border-box;
+     padding:1rem;
+     padding-top:2rem;
+ }
+ 
+ figure.labeled-value-value img,
+ figure.labeled-value-value video {
+     max-width: calc(100% - var(--sl-spacing-large));
+     max-height: calc(100% - var(--sl-spacing-large));
+     margin: 0;
+     width: 100%;
+     height: 100%;
+ }
+ 
+ figure.labeled-value-value audio {
+     width: 100%;
+ }
+ 
+ figure.labeled-value-value figcaption {
+     font-size: var(--sl-font-size-small); /* Using Shoelace font size variable */
+     text-align: center;
+     margin-top: var(--sl-spacing-x-small); /* Smaller spacing variable */
+     width: calc(100% - var(--sl-spacing-large));
+ }
+ 
+ figure.labeled-value-value figcaption a {
+     text-decoration: none;
+     float: right;
+     color: var(--sl-color-primary-500); /* Shoelace color variable */
+ }
+ figure.labeled-value-value figcaption a:hover {
+     transform: scale(1.2);
+     transform-origin: center left;
+ }
+ 
+ .labeled-color .color-square {
+     width: 0.8rem;
+     height: 0.8rem;
+     display:inline-block;
+ }
+ 
+ .labeled-void .na-block {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 600px;
+     max-height: 400px;
+     width: 600px;
+     height: 400px;
+     background-color: var(--sl-color-gray-100); /* Shoelace color variable */
+     background-image:
+         linear-gradient(45deg, var(--sl-color-gray-200) 25%, transparent 25%, 
+         transparent 75%, var(--sl-color-gray-200) 75%, var(--sl-color-gray-200)),
+         linear-gradient(45deg, var(--sl-color-gray-200) 25%, transparent 25%, 
+         transparent 75%, var(--sl-color-gray-200) 75%, var(--sl-color-gray-200));
+     background-size: 20px 20px;
+     background-position: 0 0, 10px 10px;
+ }
+ .labeled-void .labeled-value-value{
+    color:var(--sl-color-gray-300); /* Shoelace color variable */
+ }
+ .labeled-value-unit{
+        font-size: var(--sl-font-size-small); /* Use Shoelace font size variable */
+        color: var(--sl-color-neutral-600); /* Use Shoelace color variable */
+        margin-left: var(--sl-spacing-x-small); /* Use Shoelace spacing variable */
+ }
+ .labeled-email .labeled-value-value a{
+        color:var(--sl-color-primary-500); /* Shoelace color variable */
+        text-decoration: none;
+ }
+    .labeled-email .labeled-value-value a:hover{
+        color:var(--sl-color-primary-700); /* Shoelace color variable */
+    }
+    .labeled-email .labeled-value-value a:after{
+       content: '✉';
+       margin-left:0.5rem;
+    }
+.labeled-file .labeled-value-value a{
+    color:var(--sl-color-primary-500); /* Shoelace color variable */
+    text-decoration: none;
+}
+   
+
+.labeled-link .labeled-value-value a{
+    color:var(--sl-color-primary-500); /* Shoelace color variable */
+    text-decoration: none;
+}
+.labeled-link .labeled-value-value a:hover{
+    color:var(--sl-color-primary-700); /* Shoelace color variable */
+}
+
+button.labeled-link-copy{
+  background:none;
+  border:0;
+  text-transform: lowercase;
+  color:var(--sl-color-neutral-500); /* Shoelace color variable */
+}
+button.labeled-link-copy:hover{
+    color:var(--sl-color-neutral-700); /* Shoelace color variable */
+    }
+    .copy-success{
+        color:var(--sl-color-success-500); /* Shoelace color variable */
+    }

@@ -1,0 +1,31 @@
+
+ul.labeled-tree{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+ul.labeled-tree li{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start; 
+    font-family:inherit;
+    font-size: inherit;
+    
+
+}
+
+ul.labeled-tree li ul.labeled-tree{
+   margin-left:2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.labeled-tree li .labeled-value-label{
+    flex:1;
+}
+ul.labeled-tree li .labeled-value-value{
+    flex:3;
+    position:relative;
+}
+

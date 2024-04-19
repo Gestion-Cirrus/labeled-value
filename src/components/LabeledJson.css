@@ -1,0 +1,36 @@
+.labeled-json details.labeled-value-value{
+  max-width: 600px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.labeled-json details.labeled-value-value pre{
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  background-color:#000;
+    color:var(--sl-color-emerald-500);
+ border: 1px solid var(--sl-panel-border-color);
+  padding:1rem;
+}
+.labeled-json details.labeled-value-value summary::marker{
+  color:var(--sl-color-primary-500);
+}
+
+.labeled-json details.labeled-value-value pre .json-string{
+  color:var(--sl-color-amber-500);
+}
+.labeled-json details.labeled-value-value pre .json-number{
+  color:var(--sl-color-teal-500);
+}
+.labeled-json details.labeled-value-value pre .json-boolean{
+  color:var(--sl-color-indigo-500);
+}
+.labeled-json details.labeled-value-value pre .json-null{
+  color:var(--sl-color-purple-500);
+}
+.labeled-json details.labeled-value-value pre .json-key{
+  color:var(--sl-color-emerald-500);
+}

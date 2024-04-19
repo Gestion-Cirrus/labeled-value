@@ -1,0 +1,6 @@
+.boolean-true{
+    color:var(--sl-color-success-500);
+}
+.boolean-false{
+    color:var(--sl-color-danger-500);
+}

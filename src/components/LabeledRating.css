@@ -1,0 +1,9 @@
+.labeled-rating .labeled-value-value .star{
+    color:var(--sl-color-neutral-300);
+}
+.labeled-rating .labeled-value-value .filled{
+    color:var(--sl-color-success-500);
+}
+.labeled-rating .labeled-value-value .empty{
+    color:var(--sl-color-neutral-500);
+}
