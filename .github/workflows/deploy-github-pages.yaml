@@ -14,33 +14,62 @@ permissions:
 
 # List of jobs
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+
+    - name: Build
+      run: |
+        npm ci
+        npm run build-storybook
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2.0.0
+      with:
+        path: storybook-static
+
   deploy:
     environment:
-        name: github-pages
-        url: ${{ steps.build-publish.outputs.page_url }}
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
-    # Job steps
+    needs: build
     steps:
-      # Manual Checkout
-      - uses: actions/checkout@v3
-
-      # Set up Node
-      - uses: actions/setup-node@v3
+      - name: Deploy to GH Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
         with:
-          node-version: '18.x'
+          token: ${{ github.token }}
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     # Job steps
+#     steps:
+#       # Manual Checkout
+#       - uses: actions/checkout@v3
 
-      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          install_command: npm install # default: npm ci
-          build_command: npm run build-storybook # default: npm run build-storybook
-          path: storybook-static # default: dist/storybook
-          checkout: false # default: true
-      - name: List Available Artifacts
-        run: |
-          echo "Listing available artifacts..."
-          ls -lah
+#       # Set up Node
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '18.x'
+
+#       #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
+#       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+#         with:
+#           install_command: npm install # default: npm ci
+#           build_command: npm run build-storybook # default: npm run build-storybook
+#           path: storybook-static # default: dist/storybook
+#           checkout: false # default: true
+#       - name: List Available Artifacts
+#         run: |
+#           echo "Listing available artifacts..."
+#           ls -lah
  
-      - name: Get the page URL
-        id: build-publish
-        run: echo "::set-output name=page_url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_ID"
+#       - name: Get the page URL
+#         id: build-publish
+#         run: echo "::set-output name=page_url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_ID"
