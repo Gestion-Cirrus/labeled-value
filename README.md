@@ -3,6 +3,10 @@
 
 Welcome to the Our Components Library documentation. This guide provides detailed information on the usage and capabilities of the different components available in the library. The components are designed to facilitate the display and interaction with various data types in a React application.
 
+# Storybook:
+
+[Link](https://gestion-cirrus.github.io/labeled-value/?path=/story/basic-media-labeledaudio--default)
+
 ## External Dependencies
 
 To use the components from this library effectively, there are external dependencies that are not bundled with the library but must be included in your application environment. This section outlines these dependencies and provides guidance on how to include them in your project.
