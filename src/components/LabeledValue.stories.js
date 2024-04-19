@@ -36,7 +36,7 @@ export const MultipleValues = () => (
     <LabeledValue label="Number" value={42} />
     <LabeledValue label="Boolean" value={true} />
     <LabeledValue label="Date" value={new Date().toISOString()} />
-    <LabeledValue label="JSON" value={{ key: 'value' }} />
+    <LabeledValue label="JSON" value={JSON.stringify({ key: 'value' })} />
     <LabeledValue label="Void" value={null} />
   </div>
 );

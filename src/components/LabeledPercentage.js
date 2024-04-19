@@ -4,7 +4,6 @@ import LabeledVoid from './LabeledVoid';
 import { isNumber, isNullish } from '../utils/typeHelpers';
 import React from 'react';
 const LabeledPercentage = ({ label, value }) => {
-    console.log('value', value , isNumber(value) , isNullish(value))
     if (!isNumber(value) || isNullish(value)) {
         return <LabeledVoid label={label} value={value} />;
     }
