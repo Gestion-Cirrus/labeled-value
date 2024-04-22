@@ -13,7 +13,7 @@
   "author": "Gestion Cirrus Inc.",
   "license": "ISC",
   "files": [
-    "dist"
+    "dist/*"
   ],
   "dependencies": {
     "@shoelace-style/shoelace": "^2.15.0",
