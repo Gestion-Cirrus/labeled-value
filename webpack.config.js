@@ -29,8 +29,8 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
+    'react': 'commonjs react',  // This ensures React is treated as a CommonJS module
+  'react-dom': 'commonjs react-dom',
     'ol': 'ol',
     'ol/ol.css': 'ol/ol.css',
     'ol/layer': 'ol/layer',
