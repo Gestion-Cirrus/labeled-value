@@ -10,7 +10,9 @@ module.exports = {
     library: {
       name: 'LabeledValue',
       type: 'umd',
-    }
+      export: 'default'  // Ensure the default export is used when the library is consumed
+    },
+    globalObject: 'this'  // Ensures compatibility with both browser and Node.js environments
   },
   module: {
     rules: [
@@ -31,38 +33,30 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'commonjs react',  // This ensures React is treated as a CommonJS module
-  'react-dom': 'commonjs react-dom',
+    'react': 'React',
+    'react-dom': 'ReactDOM',
     'ol': 'ol',
     'ol/ol.css': 'ol/ol.css',
     'ol/layer': 'ol/layer',
     'ol/source': 'ol/source',
     'ol/format': 'ol/format',
     'ol/style': 'ol/style'
-    
-       
-        
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    // modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'labeledvalue.bundle.css',
     }),
   ],
-    optimization: {
-        minimize: true,
-        minimizer: [new TerserPlugin({
-            extractComments: {
-                condition: /^\**!|@preserve|@license|@cc_on/i, // Adjusted to include more types of comments
-                banner: (licenseFile) => {
-                    return `License information can be found in LICENSE.txt. For more details, see LICENSE.txt in the project root.`;
-                },
-            },
-        })]
-    },
-    devtool: 'source-map'
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      extractComments: 'all',
+      terserOptions: {
+        format: {
+          comments: false,
+        },
+      },
+    })],
+  },
+  devtool: 'source-map'
 };
