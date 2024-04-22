@@ -1,3 +1,11 @@
+/* harmony default export */
+
+/* reexport */
+
+/* webpack/runtime/compat get default export */
+
+/*#__PURE__*/
+
 /**
  * @license
  * Copyright (c) Gestion Cirrus Inc. 2024
@@ -14,7 +22,13 @@
 
 /***/
 
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+
+// CONCATENATED MODULE: ./src/components/LabeledTree.js
+
 // CONCATENATED MODULE: ./src/index.js
+
+// CONCATENATED MODULE: ./src/utils/typeHelpers.js
 
 // CONCATENATED MODULE: external "react"
 
@@ -22,13 +36,21 @@
 
 // Create a new module (and put it into the cache)
 
+// ESM COMPAT FLAG
+
+// EXPORTS
+
 // EXTERNAL MODULE: external "ol"
 
 // EXTERNAL MODULE: external "ol/ol.css"
 
 // Execute the module function
 
+// Function to add syntax highlighting
+
 // Return the exports of the module
+
+// Serialize JSON with indentation
 
 // The module cache
 
@@ -36,8 +58,24 @@
 
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 
+// assuming the GeoJSON is in standard geographic coordinates
+
+// blue
+
+// default style
+
+// define __esModule on exports
+
+// define getter functions for harmony exports
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// green
+
 // no module.id needed
 
 // no module.loaded needed
 
 // webpackBootstrap
+
+// will be updated
