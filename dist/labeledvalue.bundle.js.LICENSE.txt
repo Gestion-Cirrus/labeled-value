@@ -16,11 +16,11 @@
 
 // CONCATENATED MODULE: ./src/index.js
 
+// CONCATENATED MODULE: external "react"
+
 // Check if module is in cache
 
 // Create a new module (and put it into the cache)
-
-// EXTERNAL MODULE: external "React"
 
 // EXTERNAL MODULE: external "ol"
 
@@ -35,8 +35,6 @@
 // The require function
 
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-
-// UNUSED EXPORTS: LabeledAudio, LabeledBoolean, LabeledColor, LabeledDate, LabeledEmail, LabeledFile, LabeledGeoJson, LabeledImage, LabeledJson, LabeledNumber, LabeledRaw, LabeledString, LabeledTree, LabeledVideo, LabeledVoid
 
 // no module.id needed
 
