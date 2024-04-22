@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "webpack --mode production",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "Gestion Cirrus Inc.",
@@ -21,6 +22,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "ol": "^6.0.0"
+  },
+  
   "devDependencies": {
     "@babel/core": "^7.24.4",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
