@@ -7,9 +7,8 @@
     "test": "jest",
     "build": "webpack --mode production",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "postinstall": "npm run build"
-  },
+    "build-storybook": "storybook build"
+    },
   "keywords": [],
   "author": "Gestion Cirrus Inc.",
   "license": "ISC",
