@@ -155,6 +155,20 @@ button.labeled-link-copy:hover{
 .boolean-false{
     color:var(--sl-color-danger-500);
 }
+.labeled-geojson .labeled-value-value{
+    max-width:600px;
+    max-height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.labeled-geojson .labeled-value-value .geojson-map{
+    width:100%;
+    height:100%;
+    max-width:calc( 100% - 2rem);
+}
+
 .labeled-json details.labeled-value-value{
   max-width: 600px;
   max-height: 400px;
@@ -191,18 +205,80 @@ button.labeled-link-copy:hover{
 .labeled-json details.labeled-value-value pre .json-key{
   color:var(--sl-color-emerald-500);
 }
-.labeled-geojson .labeled-value-value{
-    max-width:600px;
-    max-height:400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.percentage-pie {
+    position: relative;
+    display:inline-block;
+    width:1rem;
+    height:1rem;
+    aspect-ratio: 1;
+    background-color: var(--sl-color-neutral-100);
+    border-radius: 50%;
+    transform:scale(0.8);
+    transform-origin: center;
+    margin-left:0;
+    margin-bottom:-0.1rem;
 }
-.labeled-geojson .labeled-value-value .geojson-map{
-    width:100%;
-    height:100%;
-    max-width:calc( 100% - 2rem);
+  .percentage-pie:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--sl-color-neutral-600) calc(var(--p)*1%),#0000 0);
+  }
+.labeled-rating .labeled-value-value .star{
+    color:var(--sl-color-neutral-300);
+}
+.labeled-rating .labeled-value-value .filled{
+    color:var(--sl-color-success-500);
+}
+.labeled-rating .labeled-value-value .empty{
+    color:var(--sl-color-neutral-500);
+}
+/* Base styling for the timeline container */
+
+.timeline-container {
+    display: flex;
+    position: relative;
+    height: 30px; /* Fixed height for the timeline */
+    background-color: #e9ecef; /* Light background for the timeline track */
+    border-radius: 15px;
+    overflow: hidden; /* Ensures no content spills outside the border radius */
+}
+
+.timeline-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    transition: width 0.3s ease-in-out; /* Smooth transition for dynamic width adjustments */
+}
+
+/* Color coding for different types of segments */
+.timeline-segment.active {
+    background-color: #28a745; /* Green for active periods */
+}
+
+.timeline-segment.paused {
+    background-color: #ffc107; /* Yellow for paused periods */
+}
+
+.timeline-segment.stopped {
+    background-color: #dc3545; /* Red for stopped periods */
+}
+
+/* Tooltip styling for additional segment info on hover */
+.timeline-segment:hover::after {
+    content: attr(title);
+    position: absolute;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    top: -35px; /* Position above the segment */
+    white-space: nowrap;
+    font-size: 12px;
+    color: #fff;
 }
 
 

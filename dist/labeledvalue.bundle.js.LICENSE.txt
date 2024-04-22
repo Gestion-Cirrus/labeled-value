@@ -22,7 +22,31 @@
 
 /***/
 
+// Assume this contains your styling
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
+
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+
+// CONCATENATED MODULE: ./src/components/LabeledTimeline.js
 
 // CONCATENATED MODULE: ./src/components/LabeledTree.js
 
@@ -57,6 +81,8 @@
 // The require function
 
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+
+// as a percentage of the total duration
 
 // assuming the GeoJSON is in standard geographic coordinates
 
