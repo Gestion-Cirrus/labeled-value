@@ -7,8 +7,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'labeledvalue.bundle.js',
-    library: 'LabeledValue',
-    libraryTarget: 'umd'
+    library: {
+      name: 'LabeledValue',
+      type: 'umd',
+    }
   },
   module: {
     rules: [
