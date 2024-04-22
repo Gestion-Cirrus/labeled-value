@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "Gestion Cirrus Inc.",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@shoelace-style/shoelace": "^2.15.0",
     "ol": "^9.1.0",
