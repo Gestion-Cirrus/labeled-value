@@ -33,8 +33,8 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
+    'react': 'commonjs react',
+    'react-dom': 'commonjs react-dom',
     'ol': 'ol',
     'ol/ol.css': 'ol/ol.css',
     'ol/layer': 'ol/layer',
