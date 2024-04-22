@@ -9,7 +9,8 @@ module.exports = {
     filename: 'labeledvalue.bundle.js',
     library: {
       name: 'LabeledValue',
-      type: 'umd'
+      type: 'umd',
+      export: 'named'
     },
     globalObject: 'this'  // Ensures compatibility with both browser and Node.js environments
   },
